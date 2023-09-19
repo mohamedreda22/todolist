@@ -1,5 +1,4 @@
 import './App.css';
-import image from './Cloud-5s-1084px.svg';
 function App() {
   return (
     <div className="App">

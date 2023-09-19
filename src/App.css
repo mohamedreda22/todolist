@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-image:url(./Gear.gif);
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -29,11 +28,35 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(0, 0, 0);
-
+  background-image:url(./giphy.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  background-position-y: 40px;
+  background-size:50%;
+  background-color: #282c34;
+  background-blend-mode: screen;
+  background-attachment: fixed;
 }
 
 .App-link {
   color: #61dafb;
+}
+h1{
+  color: #61dafb;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000000;
+}
+span{
+  color: #61dafb;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000000;
+  padding-top: 170px;
 }
 
 @keyframes App-logo-spin {
