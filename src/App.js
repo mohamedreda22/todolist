@@ -1,11 +1,11 @@
 import './App.css';
+import Sidebar from './components/sidebar';
+import Upcoming from './components/upcoming';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-          <h1>To Do List</h1>
-          <span>coming soon...</span>
-      </header>
+           <Sidebar/>
+           <Upcoming/>
     </div>
   );
 }

@@ -1,0 +1,124 @@
+*{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 2.5;
+    color: #333;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background: #eeecec;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    z-index: 100;
+    transition: all .3s ease;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+.sidebar__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 60px;
+    border-bottom: 1px solid #eee;
+    background: black;
+    
+}
+.sidebar__title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+
+}
+.sidebar__menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar__link:hover{
+    background: #eee;
+}
+.sidebar__link.active_menu_link{
+    background: #eee;
+}
+
+
+.sidebar.open{
+    width: 60px;
+}
+.sidebar__link span{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;    
+}
+.sidebar__link i{
+    margin-right: .5rem;
+
+}
+.sidebar__logo{
+    display: flex;
+    height: 60px;
+    border-radius: 50px;
+    background: black;
+    
+}
+.sidebar__search{
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+.sidebar__search input{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.fa{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-left: 25px;
+
+}
+.sidebar__searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 30px;
+    size: 20px;
+    background-color: #eeecec;
+    border-radius: 15px;
+    margin-left: -45px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    border: 1px solid #eee;
+    transition: all .3s ease;
+    width: 250px;
+
+  }
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: red;
+    background: transparent;
+
+  }
+span{
+    color: #333;
+    text-align: left;
+    margin-left: 23px;
+}
