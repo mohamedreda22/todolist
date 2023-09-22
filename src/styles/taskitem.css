@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #ccc;
+    --error-color: red;
+  }
+  
+  .upcoming {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    margin: 0 auto;
+    padding-left: 320px;
+
+  }
+  
+  .upcoming__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .upcoming__title {
+    color: #007bff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+
+  
+  .upcoming__tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap:wrap;
+  }
+  
+  .upcoming__taskContainer {
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(50% - 10px);
+
+  }
+  
+  .upcoming__taskFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .upcoming__taskStatus,
+  .upcoming__taskPriority {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  
+  .upcoming__taskDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+    .upcoming__taskDelete:hover {
+        background-color: #ccc;
+    }  
+ 
+  .upcoming__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 250px;
+
+  }

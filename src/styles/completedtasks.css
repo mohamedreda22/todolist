@@ -1,0 +1,75 @@
+.completed-tasks {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    margin: 0 auto;
+    padding-left: 320px;
+}
+  
+  .completed-tasks__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 200px;
+  }
+  
+  .completed-tasks__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(28, 165, 28);
+    text-align: center;
+  }
+  
+  .completed-tasks__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+  
+  .completed-tasks__item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(50% - 10px); 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .completed-tasks__item-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .completed-tasks__item-description {
+    margin-bottom: 10px;
+  }
+  
+  .completed-tasks__item-date {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .completed-tasks__item-completed {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .completed-tasks__item-delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

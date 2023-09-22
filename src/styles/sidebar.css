@@ -122,3 +122,20 @@ span{
     text-align: left;
     margin-left: 23px;
 }
+.sidebar__search{
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+.sidebar__searchResults{
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+    color: red;
+    background-color: rgba(9, 108, 194, 0.592);
+    border-radius: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #eee;
+    transition: all .3s ease;
+
+}
