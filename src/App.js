@@ -5,6 +5,7 @@ import AddTask from "./components/addTask";
 import Sidebar from "./components/sidebar";
 import CompletedTasks from "./components/completedTasks";
 import TaskDetails from './components/taskDetails'; 
+import StickyWall from './components/stickyWall';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/addTask" element={<><Sidebar /><AddTask /></>} />
         <Route path="/completed" element={<><Sidebar /><CompletedTasks /></>} />
         <Route path="/task/:id" element={<><Sidebar /><TaskDetails/></>} />
+        <Route path="/stickyWall" element={<><Sidebar /><StickyWall/></>}/>
 
 
       </Routes>

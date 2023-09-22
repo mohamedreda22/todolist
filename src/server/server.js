@@ -97,6 +97,18 @@ app.delete('/tasks/:id', (req, res) => {
   res.status(204).send();
 });
 
+app.patch('/tasks/:id/toggle',(req,res)=>{
+  const taskId = parseInt(req.params.id);
+  const taskIndex = tasks.findIndex((task) => task.id === taskId);
+  if (taskIndex === -1) {
+    throw new NotFoundError('Task not found');
+  } else {
+    tasks[taskIndex].completed = !tasks[taskIndex].completed;
+    res.json(tasks[taskIndex]);
+  }
+  res.status(200).json({ message: 'Task toggled successfully' });
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
