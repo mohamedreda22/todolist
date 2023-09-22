@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const { validationResult } = require('express-validator');
+const { check } = require('express-validator');
 
 const app = express();
 const port = 8000;
@@ -7,7 +9,6 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
-// Sample tasks data (replace with a database or actual data source)
 let tasks = [
   {
     id: 1,
@@ -27,31 +28,65 @@ let tasks = [
   },
 ];
 
+class NotFoundError extends Error {
+  constructor(message) {
+    super(message);
+    this.status = 404;
+  }
+}
+
 // Get all tasks
 app.get('/tasks', (req, res) => {
-  res.json(tasks);
+  const {sortByDate}=req.query;
+  let taskToReturn =[...tasks];
+  if (sortByDate){
+    taskToReturn.sort((a,b)=>new Date(a.date)- new Date(b.date));
+  }
+  res.json(taskToReturn);
 });
 
 // Create a new task
-app.post('/tasks', (req, res) => {
+app.post('/tasks',[
+  check('title').isLength({ min: 1 }).withMessage('Title is required'),
+  check('description').isLength({ min: 1 }).withMessage('Description is required'),
+  check('date').isLength({ min: 1 }).withMessage('Date is required'),
+  check('priority').isLength({ min: 1 }).withMessage('Priority is required'),
+  ],
+ (req, res) => {
   const newTask = req.body;
   newTask.id = tasks.length + 1;
   tasks.push(newTask);
   res.status(201).json(newTask);
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
 });
 
 // Update a task
-app.put('/tasks/:id', (req, res) => {
+app.put('/tasks/:id',[
+  check('title').isLength({ min: 1 }).withMessage('Title is required'),
+  check('description').isLength({ min: 1 }).withMessage('Description is required'),
+  check('date').isLength({ min: 1 }).withMessage('Date is required'),
+  check('priority').isLength({ min: 1 }).withMessage('Priority is required'),
+], (req, res) => {
   const taskId = parseInt(req.params.id);
   const updatedTask = req.body;
+  
 
   const taskIndex = tasks.findIndex((task) => task.id === taskId);
 
   if (taskIndex === -1) {
-    res.status(404).json({ error: 'Task not found' });
+    throw new NotFoundError('Task not found');
   } else {
     tasks[taskIndex] = updatedTask;
     res.json(updatedTask);
+  }
+  const errors = validationResult(req);
+  if(!errors.isEmpty()){
+    return res.status(400).json({errors: errors.array()});
   }
 });
 
